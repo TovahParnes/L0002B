@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tovah/Development/L0002B/Assignment1/ConsoleApplication/ConsoleApplication.csproj": {}
+    "C:\\Users\\tovah\\School\\L0002B\\Assignment1\\ConsoleApplication\\ConsoleApplication.csproj": {}
   },
   "projects": {
-    "/Users/tovah/Development/L0002B/Assignment1/ConsoleApplication/ConsoleApplication.csproj": {
+    "C:\\Users\\tovah\\School\\L0002B\\Assignment1\\ConsoleApplication\\ConsoleApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tovah/Development/L0002B/Assignment1/ConsoleApplication/ConsoleApplication.csproj",
+        "projectUniqueName": "C:\\Users\\tovah\\School\\L0002B\\Assignment1\\ConsoleApplication\\ConsoleApplication.csproj",
         "projectName": "ConsoleApplication",
-        "projectPath": "/Users/tovah/Development/L0002B/Assignment1/ConsoleApplication/ConsoleApplication.csproj",
-        "packagesPath": "/Users/tovah/.nuget/packages/",
-        "outputPath": "/Users/tovah/Development/L0002B/Assignment1/ConsoleApplication/obj/",
+        "projectPath": "C:\\Users\\tovah\\School\\L0002B\\Assignment1\\ConsoleApplication\\ConsoleApplication.csproj",
+        "packagesPath": "C:\\Users\\tovah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tovah\\School\\L0002B\\Assignment1\\ConsoleApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/tovah/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\tovah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "net8.0": {
@@ -48,12 +49,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/Users/tovah/.vscode-dotnet-sdk/.dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
