@@ -19,36 +19,12 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+
+        // Variables
         string output;
         int[] values = { 500, 200, 100, 50, 20, 10, 5, 1 };
         string[] valueNames = { "500-lappar", "200-lappar", "100-lappar", "50-lappar", "20-lappar", "10-kronor", "5-kronor", "1-kronor" };
-
-
-
-        private void tbPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPrice_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPaid_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbPaid_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblChange_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
@@ -57,12 +33,17 @@ namespace WindowsFormsApp1
             int paid = int.Parse(tbPaid.Text);
 
             int change = paid - price;
-            output = output + "Växel tillbaka: " + change + " kr\n";
+            if (change < 0)
+            {
+                output = "Det betalade täcker inte kostnaden. Försök igen.";
+            } else
+            {
+                output += "Växel tillbaka: " + change + " kr\n";
 
-            for (int i = 0; i<values.Length; i++) {
-            change = calculateChange(change, values[i], valueNames[i]);
+                for (int i = 0; i<values.Length; i++) {
+                change = calculateChange(change, values[i], valueNames[i]);
+                }
             }
-
             lblChange.Text = output;
         }
 
@@ -71,7 +52,7 @@ namespace WindowsFormsApp1
             int valAmmount = (int)Math.Floor((decimal)change / value);
             if (valAmmount > 0)
             {
-                output = output + valueName + ": " + valAmmount + "\n";
+                output += valueName + ": " + valAmmount + "\n";
                 change = change % value;
             }
             return change;
@@ -81,7 +62,5 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
-
-
     }
 }

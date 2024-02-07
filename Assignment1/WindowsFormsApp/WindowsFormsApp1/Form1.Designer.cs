@@ -50,21 +50,12 @@ namespace WindowsFormsApp1
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
-            // lblHelloWorld
-            // 
-            this.lblHelloWorld.AutoSize = true;
-            this.lblHelloWorld.Location = new System.Drawing.Point(279, 174);
-            this.lblHelloWorld.Name = "lblHelloWorld";
-            this.lblHelloWorld.Size = new System.Drawing.Size(0, 20);
-            this.lblHelloWorld.TabIndex = 1;
-            // 
             // tbPrice
             // 
             this.tbPrice.Location = new System.Drawing.Point(52, 68);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(230, 26);
             this.tbPrice.TabIndex = 2;
-            this.tbPrice.TextChanged += new System.EventHandler(this.tbPrice_TextChanged);
             // 
             // tbPaid
             // 
@@ -72,7 +63,6 @@ namespace WindowsFormsApp1
             this.tbPaid.Name = "tbPaid";
             this.tbPaid.Size = new System.Drawing.Size(230, 26);
             this.tbPaid.TabIndex = 3;
-            this.tbPaid.TextChanged += new System.EventHandler(this.tbPaid_TextChanged);
             // 
             // lblPrice
             // 
@@ -82,7 +72,6 @@ namespace WindowsFormsApp1
             this.lblPrice.Size = new System.Drawing.Size(80, 20);
             this.lblPrice.TabIndex = 4;
             this.lblPrice.Text = "Ange pris:";
-            this.lblPrice.Click += new System.EventHandler(this.lblPrice_Click);
             // 
             // lblPaid
             // 
@@ -92,7 +81,6 @@ namespace WindowsFormsApp1
             this.lblPaid.Size = new System.Drawing.Size(104, 20);
             this.lblPaid.TabIndex = 5;
             this.lblPaid.Text = "Ange betalat:";
-            this.lblPaid.Click += new System.EventHandler(this.lblPaid_Click);
             // 
             // lblChange
             // 
@@ -102,7 +90,6 @@ namespace WindowsFormsApp1
             this.lblChange.Size = new System.Drawing.Size(105, 20);
             this.lblChange.TabIndex = 6;
             this.lblChange.Text = "Växel tillbaka:";
-            this.lblChange.Click += new System.EventHandler(this.lblChange_Click);
             // 
             // btnExitProgram
             // 
