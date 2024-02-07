@@ -22,10 +22,11 @@ namespace WindowsFormsApp1
 
         // Variables
         string output;
+        // Values and vale names
         int[] values = { 500, 200, 100, 50, 20, 10, 5, 1 };
         string[] valueNames = { "500-lappar", "200-lappar", "100-lappar", "50-lappar", "20-lappar", "10-kronor", "5-kronor", "1-kronor" };
         
-
+        // Read the input values and print the change
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             output = "";
@@ -33,6 +34,7 @@ namespace WindowsFormsApp1
             int paid = int.Parse(tbPaid.Text);
 
             int change = paid - price;
+            // Check if the price is more than the paid ammount
             if (change < 0)
             {
                 output = "Det betalade täcker inte kostnaden. Försök igen.";
@@ -47,6 +49,7 @@ namespace WindowsFormsApp1
             lblChange.Text = output;
         }
 
+        // Calculate change for the given value
         private int calculateChange(int change, int value, string valueName)
         {
             int valAmmount = (int)Math.Floor((decimal)change / value);
@@ -58,6 +61,7 @@ namespace WindowsFormsApp1
             return change;
         }
 
+        // Exit program
         private void btnExitProgram_Click(object sender, EventArgs e)
         {
             this.Close();
