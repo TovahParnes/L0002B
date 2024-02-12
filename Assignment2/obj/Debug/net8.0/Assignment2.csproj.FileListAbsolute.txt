@@ -1,0 +1,15 @@
+/Users/tovah/Development/L0002B/Assignment2/obj/Debug/net8.0/Assignment2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tovah/Development/L0002B/Assignment2/obj/Debug/net8.0/Assignment2.AssemblyInfoInputs.cache
+/Users/tovah/Development/L0002B/Assignment2/obj/Debug/net8.0/Assignment2.AssemblyInfo.cs
+/Users/tovah/Development/L0002B/Assignment2/obj/Debug/net8.0/Assignment2.csproj.CoreCompileInputs.cache
+/Users/tovah/Development/L0002B/Assignment2/obj/Debug/net8.0/Assignment2.sourcelink.json
+/Users/tovah/Development/L0002B/Assignment2/bin/Debug/net8.0/Assignment2
+/Users/tovah/Development/L0002B/Assignment2/bin/Debug/net8.0/Assignment2.deps.json
+/Users/tovah/Development/L0002B/Assignment2/bin/Debug/net8.0/Assignment2.runtimeconfig.json
+/Users/tovah/Development/L0002B/Assignment2/bin/Debug/net8.0/Assignment2.dll
+/Users/tovah/Development/L0002B/Assignment2/bin/Debug/net8.0/Assignment2.pdb
+/Users/tovah/Development/L0002B/Assignment2/obj/Debug/net8.0/Assignment2.dll
+/Users/tovah/Development/L0002B/Assignment2/obj/Debug/net8.0/refint/Assignment2.dll
+/Users/tovah/Development/L0002B/Assignment2/obj/Debug/net8.0/Assignment2.pdb
+/Users/tovah/Development/L0002B/Assignment2/obj/Debug/net8.0/Assignment2.genruntimeconfig.cache
+/Users/tovah/Development/L0002B/Assignment2/obj/Debug/net8.0/ref/Assignment2.dll
