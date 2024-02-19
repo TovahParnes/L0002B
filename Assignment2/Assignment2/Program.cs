@@ -1,4 +1,5 @@
 ﻿using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Assignment2
 {
@@ -17,7 +18,7 @@ namespace Assignment2
                 Console.WriteLine("Menu:");
                 Console.WriteLine("1. Input person");
                 Console.WriteLine("2. Print list");
-                Console.WriteLine("3. Add list of people");
+                Console.WriteLine("3. Add list of people (for easier testing)");
                 Console.WriteLine("4. Exit");
                 int choice = int.Parse(Console.ReadLine());
                 Console.WriteLine();
@@ -48,6 +49,8 @@ namespace Assignment2
                 else if (choice == 4)
                 {
                     Environment.Exit(0);
+                } else {
+                    Console.WriteLine("Please input a valid number 1-4");
                 }
             }
 
@@ -121,38 +124,50 @@ namespace Assignment2
             return persons;
         }
 
-        //Prints people to the console and a file
+        //Prints all the lines to a file and the console
         static void printPeople(List<Person> persons)
         {
-            //Console.WriteLine("{0,15} {1,15} {2,10} {3,10}", "Namn", "Pers.Num", "Distrikt", "Antal sålda");  
+            string fileName = "L0002B_Assignment2_output.txt";
+            List<string> toPrint = stringToPrintPeople(persons);
+            using (StreamWriter writer = new StreamWriter(fileName))
+            foreach (String line in toPrint)
+            {
+                Console.WriteLine(line);
+                writer.WriteLine(line);
+            }
+        }
+
+        //Creates a list of all lines to be printed
+        static List<string> stringToPrintPeople(List<Person> persons)
+        {
             int oldSold = 0;
             int count = 0;
             List<string> toPrint = new List<string>();
-            toPrint.Add(("{0,15} {1,15} {2,10} {3,10}", "Namn", "Pers.Num", "Distrikt", "Antal sålda"));
+            toPrint.Add("Namn           Pers.Num        Distrikt    Antal sålda");
             foreach (Person person in persons)
             {
                 if (oldSold < 50 && person.Sold >= 50)
                 {
-                    Console.WriteLine(strLevel(count, "0-49"));
+                    toPrint.Add(strLevel(count, "0-49"));
                     count = 0;
                 }
                 else if (oldSold < 100 && person.Sold >= 100)
                 {
-                    Console.WriteLine(strLevel(count, "50-99"));
+                    toPrint.Add(strLevel(count, "50-99"));
                     count = 0;
                 }
                 else if (oldSold < 200 && person.Sold >= 200)
                 {
-                    Console.WriteLine(strLevel(count, "100-199"));
+                    toPrint.Add(strLevel(count, "100-199"));
                     count = 0;
 
                 }
                 count++;
-                toPrint += ("{0,15} {1,15} {2,10} {3,10}", person.Name, person.Pnum, person.District, person.Sold);
+                toPrint.Add(person.Name + "     " + person.Pnum + "     " + person.District + "     " + person.Sold.ToString());
                 oldSold = person.Sold;
             }
-            Console.WriteLine(strLevel(count, "200+"));
-            Console.WriteLine(toPrint);
+            toPrint.Add(strLevel(count, "200+"));
+            return toPrint;
         }
 
 

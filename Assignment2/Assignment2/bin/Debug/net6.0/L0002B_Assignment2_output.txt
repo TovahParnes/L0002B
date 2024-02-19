@@ -1,0 +1,8 @@
+Namn           Pers.Num        Distrikt    Antal sålda
+bb     4353     bbb     2
+cc     654645     cc     5
+2 säljare har nått nivå 0-49 artiklar
+
+aaa     12131     aaa     1111
+1 säljare har nått nivå 200+ artiklar
+
