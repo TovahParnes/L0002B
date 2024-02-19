@@ -1,0 +1,11 @@
+C:\Users\tovah\School\L0002B\Assignment3\Assignment3\bin\Debug\Assignment3.exe.config
+C:\Users\tovah\School\L0002B\Assignment3\Assignment3\bin\Debug\Assignment3.exe
+C:\Users\tovah\School\L0002B\Assignment3\Assignment3\bin\Debug\Assignment3.pdb
+C:\Users\tovah\School\L0002B\Assignment3\Assignment3\obj\Debug\Assignment3.csproj.AssemblyReference.cache
+C:\Users\tovah\School\L0002B\Assignment3\Assignment3\obj\Debug\Assignment3.csproj.SuggestedBindingRedirects.cache
+C:\Users\tovah\School\L0002B\Assignment3\Assignment3\obj\Debug\Assignment3.Form1.resources
+C:\Users\tovah\School\L0002B\Assignment3\Assignment3\obj\Debug\Assignment3.Properties.Resources.resources
+C:\Users\tovah\School\L0002B\Assignment3\Assignment3\obj\Debug\Assignment3.csproj.GenerateResource.cache
+C:\Users\tovah\School\L0002B\Assignment3\Assignment3\obj\Debug\Assignment3.csproj.CoreCompileInputs.cache
+C:\Users\tovah\School\L0002B\Assignment3\Assignment3\obj\Debug\Assignment3.exe
+C:\Users\tovah\School\L0002B\Assignment3\Assignment3\obj\Debug\Assignment3.pdb
