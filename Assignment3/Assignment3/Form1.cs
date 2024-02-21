@@ -23,22 +23,22 @@ namespace Assignment3
         private void btnRegister_Click(object sender, EventArgs e)
         {
             output = "";
-            string fName = txbFname.Text;
-            string lName = txbLname.Text;
-            long pNum = long.Parse(txbPnum.Text);
+            Person person = new Person(txbFname.Text, txbLname.Text, txbPnum.Text);
 
-            if (!validPnum(pNum))
+            if (!person.validPnum())
             {
                 output = "Personnummret är inte giltigt.";
-                lblOutput.Text = output;
+                txbOutput.Text = output;
                 return;
             }
 
-            output += ("Förnamn: " + fName + "\n");
-            output += ("Efternamn: " + lName + "\n");
-            output += ("Personnummer: " + pNum + "\n");
+            //todo fix new line in printing
+            output += ("Förnamn: " + person.fName + "   \n");
+            output += ("Efternamn: " + person.lName + "     \n");
+            output += ("Personnummer: " + person.pNum + "   \n");
+            output += ("Kön: " + person.getGender() + "\n");
 
-            lblOutput.Text = output;
+            txbOutput.Text = output;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -46,9 +46,61 @@ namespace Assignment3
             this.Close();
         }
 
-        public bool validPnum(long pNum)
+
+    }
+
+    internal class Person
+    {
+        public string fName;
+        public string lName;
+        public string pNum;
+
+        public Person(string FName, string LName, string Pnum)
         {
-            return true;
+            this.fName = FName;
+            this.lName = LName;
+            this.pNum = Pnum;
+        }
+
+        public bool validPnum()
+        {
+            if (pNum.Length != 10)
+            {
+                return false;
+            }
+
+            bool multiply = true;
+            int sum = 0;
+            foreach (char i in pNum)
+            {
+                int num = i - '0';
+                if (multiply && num >= 5)
+                {
+                    sum += num*2 % 10 + 1;
+                }
+                else
+                {
+                    sum += num;
+                }
+                multiply = !multiply;
+            }
+            Console.WriteLine(sum);
+
+            if (sum%10 == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public string getGender()
+        {
+            int gen = pNum[pNum.Length - 2] - '0';
+            if (gen%2 == 0)
+            {
+                return "Kvinna";
+            }
+            return "Man";
         }
     }
 }

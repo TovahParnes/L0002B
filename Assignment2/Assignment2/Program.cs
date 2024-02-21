@@ -1,4 +1,5 @@
-﻿using System.Xml.Linq;
+﻿using System;
+using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Assignment2
@@ -14,6 +15,7 @@ namespace Assignment2
 
             while (true)
             {
+                validPnum("0006089460");
                 Console.WriteLine();
                 Console.WriteLine("Menu:");
                 Console.WriteLine("1. Input person");
@@ -180,7 +182,38 @@ namespace Assignment2
             return "";
         }
 
-        
+        static bool validPnum(string pNum)
+        {
+            if (pNum.Length != 10)
+            {
+                return false;
+            }
+
+            bool multiply = true;
+            int sum = 0;
+            foreach (char i in pNum)
+            {
+                int num = i - '0';
+                if (multiply && num >= 5)
+                {
+                        sum += num % 10 + 1;
+                }
+                else
+                {
+                    sum += num;
+                }
+                multiply = !multiply;
+            }
+            Console.WriteLine(sum);
+
+            if (sum == 20)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
 
     }
 
