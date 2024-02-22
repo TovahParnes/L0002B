@@ -120,6 +120,7 @@
             // 
             // txbOutput
             // 
+            this.txbOutput.AcceptsReturn = true;
             this.txbOutput.Location = new System.Drawing.Point(91, 217);
             this.txbOutput.Multiline = true;
             this.txbOutput.Name = "txbOutput";

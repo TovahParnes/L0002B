@@ -18,27 +18,27 @@ namespace Assignment3
         }
 
         // Variables
-        string output;
+        List<string> output = new List<string>();
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            output = "";
+            output.Clear();
             Person person = new Person(txbFname.Text, txbLname.Text, txbPnum.Text);
 
+            //Return if not a valid pnum
             if (!person.validPnum())
             {
-                output = "Personnummret är inte giltigt.";
-                txbOutput.Text = output;
+                output.Add("Personnummret är inte giltigt.");
+                OutputText(output);
                 return;
             }
 
-            //todo fix new line in printing
-            output += ("Förnamn: " + person.fName + "   \n");
-            output += ("Efternamn: " + person.lName + "     \n");
-            output += ("Personnummer: " + person.pNum + "   \n");
-            output += ("Kön: " + person.getGender() + "\n");
+            output.Add("Förnamn: " + person.fName + "   \n");
+            output.Add("Efternamn: " + person.lName + "     \n");
+            output.Add("Personnummer: " + person.pNum + "   \n");
+            output.Add("Kön: " + person.getGender() + "\n");
 
-            txbOutput.Text = output;
+            OutputText(output);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -46,7 +46,17 @@ namespace Assignment3
             this.Close();
         }
 
+        //Function for outputting the resuly
+        private void OutputText(List<string> output)
+        {
+            txbOutput.Text = "";
+            foreach (string s in output)
+            {
+                txbOutput.AppendText(s);
+                txbOutput.AppendText(Environment.NewLine);
 
+            }
+        }
     }
 
     internal class Person
@@ -54,12 +64,13 @@ namespace Assignment3
         public string fName;
         public string lName;
         public string pNum;
+        public bool valid;
 
-        public Person(string FName, string LName, string Pnum)
+        public Person(string fName, string lName, string pNum)
         {
-            this.fName = FName;
-            this.lName = LName;
-            this.pNum = Pnum;
+            this.fName = fName;
+            this.lName = lName;
+            this.pNum = pNum;
         }
 
         public bool validPnum()
