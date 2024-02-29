@@ -39,7 +39,6 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.txbOutput = new System.Windows.Forms.TextBox();
             this.lblOutput = new System.Windows.Forms.Label();
-            this.menu = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txbFname
@@ -48,7 +47,6 @@
             this.txbFname.Name = "txbFname";
             this.txbFname.Size = new System.Drawing.Size(197, 26);
             this.txbFname.TabIndex = 0;
-            this.txbFname.TextChanged += new System.EventHandler(this.txbFname_TextChanged);
             // 
             // title
             // 
@@ -83,7 +81,6 @@
             this.txbLname.Name = "txbLname";
             this.txbLname.Size = new System.Drawing.Size(197, 26);
             this.txbLname.TabIndex = 3;
-            this.txbLname.TextChanged += new System.EventHandler(this.txbLname_TextChanged);
             // 
             // lblPnum
             // 
@@ -100,11 +97,10 @@
             this.txbPnum.Name = "txbPnum";
             this.txbPnum.Size = new System.Drawing.Size(197, 26);
             this.txbPnum.TabIndex = 5;
-            this.txbPnum.TextChanged += new System.EventHandler(this.txbPnum_TextChanged);
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(360, 217);
+            this.btnRegister.Location = new System.Drawing.Point(514, 59);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(184, 33);
             this.btnRegister.TabIndex = 7;
@@ -114,7 +110,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(523, 290);
+            this.btnExit.Location = new System.Drawing.Point(514, 103);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(184, 33);
             this.btnExit.TabIndex = 8;
@@ -140,25 +136,11 @@
             this.lblOutput.TabIndex = 10;
             this.lblOutput.Text = "Resultat";
             // 
-            // menu
-            // 
-            this.menu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.menu.FormattingEnabled = true;
-            this.menu.Items.AddRange(new object[] {
-            "Registrera person",
-            "Avsluta program"});
-            this.menu.Location = new System.Drawing.Point(504, 64);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(222, 28);
-            this.menu.TabIndex = 11;
-            this.menu.SelectedIndexChanged += new System.EventHandler(this.menu_SelectedIndexChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 463);
-            this.Controls.Add(this.menu);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.txbOutput);
             this.Controls.Add(this.btnExit);
@@ -172,7 +154,6 @@
             this.Controls.Add(this.txbFname);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,7 +172,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txbOutput;
         private System.Windows.Forms.Label lblOutput;
-        private System.Windows.Forms.ComboBox menu;
     }
 }
 

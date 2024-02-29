@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
 
 namespace Assignment3
 {
@@ -20,14 +19,12 @@ namespace Assignment3
 
         // Variables
         List<string> output = new List<string>();
-        Person test = new Person("", "", "");
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
             output.Clear();
             Person person = new Person(txbFname.Text, txbLname.Text, txbPnum.Text);
 
-            /*
             //Return if not a valid pnum
             if (!person.validPnum())
             {
@@ -42,8 +39,6 @@ namespace Assignment3
             output.Add("Kön: " + person.getGender() + "\n");
 
             OutputText(output);
-            */
-            OutputText(test.generateOutput());
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -62,42 +57,14 @@ namespace Assignment3
 
             }
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbPnum_TextChanged(object sender, EventArgs e)
-        {
-            test.PNum = txbPnum.Text;
-
-        }
-
-        private void txbLname_TextChanged(object sender, EventArgs e)
-        {
-            test.lName = txbLname.Text;
-        }
-
-        private void txbFname_TextChanged(object sender, EventArgs e)
-        {
-            test.fName = txbFname.Text;
-        }
     }
 
     internal class Person
     {
         public string fName;
         public string lName;
-        private string pNum;
-        private bool valid;
-        private List<String> output;
-        private string gender;
+        public string pNum;
+        public bool valid;
 
         public Person(string fName, string lName, string pNum)
         {
@@ -106,23 +73,11 @@ namespace Assignment3
             this.pNum = pNum;
         }
 
-        public string PNum
-        {
-            get => pNum;
-            set
-            {
-                if (validPnum(value)){
-                    pNum = value;
-                }
-            }
-        }
-
-        public bool validPnum(string pNum)
+        public bool validPnum()
         {
             if (pNum.Length != 10)
             {
-                valid  = false;
-                return valid;
+                return false;
             }
 
             bool multiply = true;
@@ -144,11 +99,9 @@ namespace Assignment3
 
             if (sum%10 == 0)
             {
-                valid = true;
-                return valid;
+                return true;
             }
-            valid = false;
-            return valid;
+            return false;
         }
 
         public string getGender()
@@ -156,20 +109,9 @@ namespace Assignment3
             int gen = pNum[pNum.Length - 2] - '0';
             if (gen%2 == 0)
             {
-                gender = "Kvinna";
                 return "Kvinna";
             }
-            gender = "Man";
             return "Man";
-        }
-
-        public List<string> generateOutput()
-        {
-            output.Add("Förnamn: " + fName + "   \n");
-            output.Add("Efternamn: " + lName + "     \n");
-            output.Add("Personnummer: " + pNum + "   \n");
-            output.Add("Kön: " + getGender() + "\n");
-            return output;
         }
     }
 }
